@@ -5,6 +5,7 @@ const cors = require('cors');
 
 const authRoutes = require('./routes/authRoutes');
 const taskRoutes = require('./routes/taskRoutes');
+const containerRoutes = require('./routes/containerRoutes');
 const { authenticateToken } = require('./middlewares/authMiddleware');
 require('dotenv').config();
 const app = express();
@@ -16,6 +17,7 @@ app.use(express.json());
 // Rotas
 app.use('/api/auth', authRoutes);
 app.use('/api/tasks', authenticateToken, taskRoutes);
+app.use('/api/containers', authenticateToken, containerRoutes);
 
 // MongoDB Atlas
 mongoose.connect(process.env.MONGODB_URI)
