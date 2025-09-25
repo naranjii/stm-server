@@ -17,4 +17,6 @@ _Este é o backend da aplicação 🌟 Starred Task Manager, responsável por au
 - MongoDB/Mongoose integration
 - Organized with Express routes and controllers
 
+## Link to frontend repo: https://github.com/naranjii/stm-front
+
 ---
